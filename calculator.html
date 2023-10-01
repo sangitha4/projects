@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<style>
+    div{width: 200px;
+        height: 300px;
+        margin-top: 40px;
+        padding-top: 20px;
+background-color:rgba(0, 0, 0, 0.449);
+border: 3px solid black;
+border-radius: 5px 5px 5px 5px;
+box-shadow: 4px 4px 4px white ,-2px -2px 0px black;
+text-shadow: 2px 2px 0px white;
+border-style:groove;
+    }
+</style>
+<body><center><h1 style="text-shadow:1px 1px 1px black;text-decoration: underline;font-family:monospace;"> CALCULATOR</h1></center>
+ <center>
+    <br>
+    <br>
+    <div>
+        <form id="calci">
+            <input id="display" style="width:180px;height: 30px;border-radius: 5px 5px 5px 5px;border: solid 3px black;">
+            <br>
+            <br>
+<input type ="button" value="AC" style="color:blue;padding:6px 6px 6px 6px;background-color:pink;width: 40px;" onclick="calci.display.value=''">
+<input type="button" value="C" style="color:blue;padding:6px 6px 6px 6px;background-color: pink;width:40px;"onclick="calci.display.value=calci.display.value.substr(0,calci.display.value.length-1)">
+<input type="button" value="%" style="color:blue;padding:6px 6px 6px 6px;background-color: pink;width:40px;"onclick="calci.display.value+='%'">
+<input type="button" value="+" style="color:blue;padding:6px 6px 6px 6px;background-color: pink;width:40px;" onclick="calci.display.value+='+'">
+            <br>
+            <br>
+<input type="button" value="1" style="color:maroon;background-color: moccasin;padding: 6px 6px 6px 6px;width: 40px;" onclick="calci.display.value+='1'">
+<input type="button" value="2" style="color:maroon;background-color: moccasin;padding: 6px 6px 6px 6px;width: 40px;" onclick="calci.display.value+='2'">
+<input type="button" value="3" style="color:maroon;background-color: moccasin;padding: 6px 6px 6px 6px;width: 40px;" onclick="calci.display.value+='3'">
+<input type="button" value="-" style="color:maroon;background-color: moccasin;padding: 6px 6px 6px 6px;width: 40px;"  onclick="calci.display.value+='-'">
+            <br>
+            <br>
+<input type="button" value="4" style="color:rgba(255, 68, 0, 0.988);background-color:rgba(135, 207, 235, 0.763);padding: 6px 6px 6px 6px;width:40px;"onclick="calci.display.value+='4'">
+<input type="button" value="5" style="color:rgba(255, 68, 0, 0.988);background-color: rgba(135, 207, 235, 0.763);padding: 6px 6px 6px 6px;width:40px;"onclick="calci.display.value+='5'">
+<input type="button" value="6" style="color:rgba(255, 68, 0, 0.988);background-color:rgba(135, 207, 235, 0.763);padding: 6px 6px 6px 6px;width:40px;"onclick="calci.display.value+='6'">
+<input type="button" value="*" style="color:rgba(255, 68, 0, 0.988);background-color:rgba(135, 207, 235, 0.763);padding: 6px 6px 6px 6px;width:40px;"  onclick="calci.display.value+='*'">
+            <br>
+            <br>
+<input type="button" value="7" style="color:rgba(0, 128, 0, 0.971);background-color:rgba(238, 130, 238, 0.651);padding: 6px 6px 6px 6px;width: 40px;" onclick="calci.display.value+='7'">
+<input type="button" value="8" style="color:rgba(0, 128, 0, 0.971);background-color: rgba(238, 131, 238, 0.651);padding: 6px 6px 6px 6px;width:40px;" onclick="calci.display.value+='8'">
+<input type="button" value="9" style="color:rgba(0, 128, 0, 0.971);background-color: rgba(238, 131, 238, 0.651);padding: 6px 6px 6px 6px;width:40px;" onclick="calci.display.value+='9'">
+<input type="button" value="/" style="color:rgba(0, 128, 0, 0.971);background-color: rgba(238, 131, 238, 0.651);padding: 6px 6px 6px 6px;width: 40px;" oonclick="calci.display.value+='/'">
+            <br>
+            <br>
+<input type="button" style="color:rgba(255, 0, 0, 0.982);background-color:rgba(127, 255, 212, 0.959);padding: 6px 6px 6px 6px;width: 40px;"  value="." onclick="calci.display.value+='.'">
+<input type="button" style="color:rgb(255, 0, 0,0.982);background-color: rgba(127, 255, 212, 0.959);padding: 6px 6px 6px 6px;width:40px;" value="0" onclick="calci.display.value+='0'">
+<input type="button" style="color:rgb(255, 0, 0,0.982);background-color: rgba(127, 255, 212, 0.959);padding: 6px 6px 6px 6px;width: 40px;" value="=" onclick="calci.display.value=eval(calci.display.value)">
+        </form>
+    </div>
+ </center>  
+</body>
+</html>

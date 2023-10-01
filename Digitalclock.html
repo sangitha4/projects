@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body id="D" onload="digitalclock()">
+    <center>
+    <h1 id="A"></h1>
+    <h2 id="B"></h2>
+    <h3 id="C"></h3>
+    </center>
+    <script>
+        function digitalclock()
+        {
+            var timezone=new Date()
+            var day=timezone.getDay()
+            if(day==0)
+            {
+            document.getElementById('D').style.backgroundImage="url(./wallpaper1.jpg)"
+            }
+            else if(day==1)
+            {
+            document.getElementById('D').style.backgroundImage="url(./wallpaper2.jpg)"   
+            }
+            else if(day==2)
+            {
+            document.getElementById('D').style.backgroundImage="url(./wallpaper3.jpg)"   
+            }
+            else if(day==3)
+            {
+            document.getElementById('D').style.backgroundImage="url(./wallpaper5.jpg)"   
+            }
+            else if(day==4)
+            {
+            document.getElementById('D').style.backgroundImage="url(./wallpaper5.jpg)"   
+            }
+            else if(day==5)
+            {
+            document.getElementById('D').style.backgroundImage="url(./wallpaper6.jpg)"   
+            }
+            else if(day==6)
+            {
+            document.getElementById('D').style.backgroundImage="url(./wallpaper8.jpg)"   
+            }
+            switch(day)
+            {
+                case 0:day='SUNDAY' 
+                break;
+                case 1:day='MONDAY'
+                break;
+                case 2:day='TUESDAY'
+                break;
+                case 3:day='WEDNESDAY'
+                break;
+                case 4:day='THURSDAY'
+                break;
+                case 5:day='FRIDAY'
+                break;
+                case 6:day='SATURDAY'
+                break;
+            }
+            document.getElementById('A').innerHTML=day
+            var dd=timezone.getDate()
+            var mon=timezone.getMonth()
+            switch(mon)
+            {
+                case 0:mon='JAN'
+                break;
+                case 1:mon='FEB'
+                break;
+                case 2:mon='MAR'
+                break;
+                case 3:mon='APR'
+                break;
+                case 4:mon='MAY'
+                break;
+                case 5:mon='JUN'
+                break;
+                case 6:mon='JUL'
+                break;
+                case 7:mon='AUG'
+                break;
+                case 8:mon='SEP'
+                break;
+                case 9:mon='OCT'
+                break;
+                case 10:mon='NOV'
+                break;
+                case 11:mon='DEC'
+                break;
+            }
+            var yyyy=timezone.getFullYear()
+            var date= dd + " / " + mon + " / " + yyyy
+            document.getElementById('B').innerHTML=date
+            var hh=timezone.getHours()
+            var session ="AM"
+            if(hh>12)
+            {
+                hh-=12;
+                session="PM"
+            }
+            var min=timezone.getMinutes()
+            var ss=timezone.getSeconds()
+            var time = hh + " : " + min + " : " + ss + " " + session
+            document.getElementById('C').innerHTML=time
+            var update=setTimeout (function(){digitalclock(),1000})
+        }
+    </script>
+</body>
+</html>
